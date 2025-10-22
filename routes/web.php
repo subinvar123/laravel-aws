@@ -17,7 +17,7 @@ use App\Http\Controllers\PasswordResetController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 // Registration Routes
 Route::get('/sign-up', [RegisterController::class, 'create'])->name('register.create');
