@@ -16,9 +16,9 @@ use App\Http\Controllers\PasswordResetController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 // Registration Routes
 Route::get('/sign-up', [RegisterController::class, 'create'])->name('register.create');
 Route::post('/sign-up', [RegisterController::class, 'store'])->name('register.store');
@@ -36,7 +36,7 @@ Route::get('/user/dashboard', function () {
 
 Route::get('/tables', [RegisterController::class, 'index'])->name('users.index');
 
-Route::get('/home', [ProductController::class, 'index'])->name('user.home');
+Route::get('/', [ProductController::class, 'index'])->name('user.home');
 
 Route::get('/products/filter', [ProductController::class, 'filter'])->name('products.filter');
 //product
